@@ -19,4 +19,17 @@ do
 sol[i]=${answer[$i]}
 done
 echo "value in array"${sol[@]}
-
+for ((  i=0; i<10 ;i++ ))
+do
+for ((  J=0; J<10 ;++J ))
+do
+if [[ ${sol[i]} -le  ${sol[j]} ]]
+then
+a=${sol[i]}
+sol[i]=${sol[j]}
+sol[j]=$a
+fi
+done
+done
+echo "values in  descending order"
+echo ${sol[@]}
