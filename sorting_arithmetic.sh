@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/bash  
 read -p " plz enter value FOR B:" b
 read -p " plz enter value FOR C:" c
 read -p " plz enter value FOR A:" a
@@ -14,22 +14,24 @@ answer[3]=$ans4
 echo "value in dictionary" ${answer[@]}
 n=${#answer[@]}
 declare -a   sol 
-for(( i=0 ; i < $n; i++ ))
+for(( l=0 ; l<$n; l++ ))
 do
-sol[i]=${answer[$i]}
+sol[l]=${answer[$l]}
+sol1[l]=${answer[$l]}
 done
 echo "value in array"${sol[@]}
-for ((  i=0; i<10 ;i++ ))
+for ((  k=0; k<$n ;k++ ))
 do
-for ((  J=0; J<10 ;++J ))
+for ((  m=0; m<$n ;++m ))
 do
-if [[ ${sol[i]} -le  ${sol[j]} ]]
+if [[ ${sol1[k]} -gt  ${sol1[m]} ]]
 then
-a=${sol[i]}
-sol[i]=${sol[j]}
-sol[j]=$a
+a=${sol1[k]}
+sol1[k]=${sol1[m]}
+sol1[m]=$a
 fi
 done
 done
-echo "values in  descending order"
-echo ${sol[@]}
+echo "values in  decending order"
+echo ${sol1[@]}
+
