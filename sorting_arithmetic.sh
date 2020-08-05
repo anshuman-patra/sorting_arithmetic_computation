@@ -5,3 +5,4 @@ read -p " plz enter value FOR A:" a
 ans1=$(( ($a+$b)*$c ))
 ans2=$(( ($a%$b)+$c ))
 ans3=$(( ($a+$c)/$b ))
+ans4=$(( ($a*$b)+$c ))
