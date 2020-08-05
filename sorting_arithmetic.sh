@@ -34,4 +34,19 @@ done
 done
 echo "values in  decending order"
 echo ${sol1[@]}
+for ((i = 0; i<$n; i++)) 
+do
+ for((j = 0; j<$n-i-1; j++))
+    do
 
+        if [ ${sol[j]} -gt ${sol[$((j+1))]} ]
+        then
+            # swap
+            temp=${sol[j]}
+            sol[$j]=${sol[$((j+1))]}
+            sol[$((j+1))]=$temp
+        fi
+    done
+done
+echo "values in  accending  order"
+echo ${sol[@]}
