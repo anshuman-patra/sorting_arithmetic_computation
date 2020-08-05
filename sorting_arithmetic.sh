@@ -1,4 +1,4 @@
-#!/bin/bash  
+#!/bin/bash 
 read -p " plz enter value FOR B:" b
 read -p " plz enter value FOR C:" c
 read -p " plz enter value FOR A:" a
@@ -11,4 +11,12 @@ answer[0]=$ans1
 answer[1]=$ans2
 answer[2]=$ans3
 answer[3]=$ans4
-echo ${answer[@]}
+echo "value in dictionary" ${answer[@]}
+n=${#answer[@]}
+declare -a   sol 
+for(( i=0 ; i < $n; i++ ))
+do
+sol[i]=${answer[$i]}
+done
+echo "value in array"${sol[@]}
+
